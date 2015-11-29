@@ -13,15 +13,22 @@ function runEslint(str, conf) {
     return linter.executeOnText(str).results[0].messages;
 }
 
-test('main', t => {
+test('Configuration is a plain object', t => {
     t.true(isPlainObj(conf));
     t.true(isPlainObj(conf.env));
     t.true(isPlainObj(conf.rules));
+    t.true(isPlainObj(conf.globals));
 
-    const errors = runEslint('\'use strict\';\nconsole.log("unicorn")\nvar foo = function () {};\nfoo();\n', conf);
+    t.end();
+});
+
+test('Linting rules', t => {
+    const errors = runEslint('\"use strict\";\nvar foo = function () {};\nconst bar = 0; if(foo==bar){foo();}\n', conf);
+
     t.is(errors[0].ruleId, 'quotes');
-    t.is(errors[1].ruleId, 'semi');
-    t.is(errors[2].ruleId, 'space-before-function-paren');
+    t.is(errors[1].ruleId, 'no-var');
+    t.is(errors[2].ruleId, 'eqeqeq');
+    t.is(errors[3].ruleId, 'space-infix-ops');
 
     t.end();
 });
