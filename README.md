@@ -1,4 +1,8 @@
-# eslint-config-kraftvaerk [![Build Status](https://travis-ci.org/kraftvaerk/eslint-config-kraftvaerk.svg?branch=master)](https://travis-ci.org/kraftvaerk/eslint-config-kraftvaerk)
+# eslint-config-kraftvaerk
+
+[![npm](https://nodei.co/npm/eslint-config-kraftvaerk.svg?downloads=true)](https://nodei.co/npm/eslint-config-kraftvaerk/)
+
+[![Build Status][ci-img]][ci]
 
 > ESLint [shareable config](http://eslint.org/docs/developer-guide/shareable-configs.html)
 
