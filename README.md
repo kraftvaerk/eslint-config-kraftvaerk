@@ -1,8 +1,9 @@
 # eslint-config-kraftvaerk 
 
+[![GitHub release](https://img.shields.io/github/release/kraftvaerk/eslint-config-kraftvaerk.svg?style=flat-square)]() [![Build Status](https://img.shields.io/travis/kraftvaerk/eslint-config-kraftvaerk/master.svg?style=flat-square)](https://travis-ci.org/kraftvaerk/eslint-config-kraftvaerk) [![David](https://img.shields.io/david/dev/kraftvaerk/eslint-config-kraftvaerk.svg?style=flat-square)]()
+
 [![npm](https://nodei.co/npm/eslint-config-kraftvaerk.svg?downloads=true)](https://nodei.co/npm/eslint-config-kraftvaerk/)
 
-[![Build Status](https://travis-ci.org/kraftvaerk/eslint-config-kraftvaerk.svg?branch=master)](https://travis-ci.org/kraftvaerk/eslint-config-kraftvaerk)
 
 > ESLint [shareable config](http://eslint.org/docs/developer-guide/shareable-configs.html)
 
