@@ -18,8 +18,6 @@ test('Configuration is a plain object', t => {
     t.true(isPlainObj(conf.env));
     t.true(isPlainObj(conf.rules));
     t.true(isPlainObj(conf.globals));
-
-    t.end();
 });
 
 test('Linting rules', t => {
@@ -27,8 +25,7 @@ test('Linting rules', t => {
 
     t.is(errors[0].ruleId, 'quotes');
     t.is(errors[1].ruleId, 'no-var');
-    t.is(errors[2].ruleId, 'eqeqeq');
-    t.is(errors[3].ruleId, 'space-infix-ops');
-
-    t.end();
+    t.is(errors[2].ruleId, 'keyword-spacing');
+    t.is(errors[3].ruleId, 'eqeqeq');
+    t.is(errors[4].ruleId, 'space-infix-ops');
 });

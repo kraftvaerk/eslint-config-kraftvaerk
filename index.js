@@ -3,7 +3,8 @@
 module.exports = {
     'env': {
         'browser':  true,
-        'node': true
+        'node': true,
+        'es6':   true
     },
     'globals': {
         'jQuery':true,
@@ -11,23 +12,27 @@ module.exports = {
         '$':true,
         'System': true
     },
-    'ecmaFeatures': {
-        'arrowFunctions': true,
-        'blockBindings': true,
-        'classes': true,
-        'defaultParams': true,
-        'destructuring': true,
-        'forOf': true,
-        'generators': false,
-        'modules': true,
-        'objectLiteralComputedProperties': true,
-        'objectLiteralDuplicateProperties': false,
-        'objectLiteralShorthandMethods': true,
-        'objectLiteralShorthandProperties': true,
-        'restParams': true,
-        'spread': true,
-        'superInFunctions': true,
-        'templateStrings': true
+    'parserOptions': {
+        'ecmaVersion': 6,
+        'sourceType': 'module',
+        'ecmaFeatures': {
+            'arrowFunctions': true,
+            'blockBindings': true,
+            'classes': true,
+            'defaultParams': true,
+            'destructuring': true,
+            'forOf': true,
+            'generators': false,
+            'modules': true,
+            'objectLiteralComputedProperties': true,
+            'objectLiteralDuplicateProperties': false,
+            'objectLiteralShorthandMethods': true,
+            'objectLiteralShorthandProperties': true,
+            'restParams': true,
+            'spread': true,
+            'superInFunctions': true,
+            'templateStrings': true
+        }
     },
     'rules': {
         /* ES6 */
@@ -91,7 +96,7 @@ module.exports = {
         // disallow else after a return in an if
         'no-else-return': 2,
         // disallow use of labels for anything other then loops and switches
-        'no-empty-label': 2,
+        'no-labels': [2, { 'allowLoop': false, 'allowSwitch': false }],
         // disallow comparisons to null without a type-checking operator
         'no-eq-null': 0,
         // disallow use of eval()
@@ -285,6 +290,8 @@ module.exports = {
         // 'jsx-quotes': 2,
         // enforces spacing between keys and values in object literal properties
         'key-spacing': [2, {'beforeColon': false, 'afterColon': true}],
+        // require a space after return, throw, and case
+        'keyword-spacing': 2,
         // enforces empty lines around comments
         'lines-around-comment': 0,
         // disallow mixed 'LF' and 'CRLF' as linebreaks
@@ -357,8 +364,6 @@ module.exports = {
         'space-in-parens': 0,
         // require spaces around operators
         'space-infix-ops': 2,
-        // require a space after return, throw, and case
-        'space-return-throw-case': 2,
         // Require or disallow spaces before/after unary operators
         'space-unary-ops': 0,
         // require or disallow a space immediately following the // or /* in a comment
