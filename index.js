@@ -2,14 +2,14 @@
 
 module.exports = {
     'env': {
-        'browser':  true,
+        'browser': true,
         'node': true,
-        'es6':   true
+        'es6': true
     },
     'globals': {
-        'jQuery':true,
+        'jQuery': true,
         'angular': true,
-        '$':true,
+        '$': true,
         'System': true
     },
     'parserOptions': {
