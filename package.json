@@ -1,18 +1,7 @@
 {
   "name": "eslint-config-kraftvaerk",
   "version": "0.0.5",
-  "description": "ESLint shareable config",
-  "repository": "https://github.com/kraftvaerk/eslint-config-kraftvaerk",
-  "author": "kraftvaerk",
-  "engines": {
-    "node": ">=4.2.2"
-  },
-  "scripts": {
-    "test": "ava"
-  },
-  "files": [
-    "index.js"
-  ],
+  "description": "Kraftvaerk's shareable config for ESLint",
   "keywords": [
     "kraftvaerk",
     "code",
@@ -33,10 +22,32 @@
     "enforce",
     "hint"
   ],
+  "homepage": "https://github.com/kraftvaerk/eslint-config-kraftvaerk",
+  "bugs": {
+    "url": "https://github.com/kraftvaerk/eslint-config-kraftvaerk/issues"
+  },
+  "license": "MIT",
+  "author": {
+    "name": "Kraftvaerk",
+    "url": "http://www.kraftvaerk.com/"
+  },
+  "files": [
+    "index.js"
+  ],
+  "main": "index.js",
+  "repository": "kraftvaerk/eslint-config-kraftvaerk",
+  "scripts": {
+    "lint": "eslint . --ignore-path .gitignore",
+    "test": "ava"
+  },
   "devDependencies": {
     "ava": "*",
-    "eslint": "4.4.1",
+    "eslint": "4.19.1",
     "is-plain-obj": "1.1.0",
-    "temp-write": "3.3.0"
+    "temp-write": "3.4.0"
+  },
+  "engines": {
+    "node": ">=8.0.0",
+    "npm": ">=5.0.0"
   }
 }
