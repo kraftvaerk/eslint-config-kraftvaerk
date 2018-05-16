@@ -2,7 +2,7 @@
 
 [![Build Status](https://img.shields.io/travis/kraftvaerk/eslint-config-kraftvaerk/master.svg?style=flat-square)](https://travis-ci.org/kraftvaerk/eslint-config-kraftvaerk) [![npm Version](https://img.shields.io/npm/v/eslint-config-kraftvaerk.svg?style=flat-square)](https://www.npmjs.com/package/eslint-config-kraftvaerk) [![npm Downloads](https://img.shields.io/npm/dm/eslint-config-kraftvaerk.svg?style=flat-square)](https://www.npmjs.com/package/eslint-config-kraftvaerk) [![devDependency Status](https://img.shields.io/david/dev/kraftvaerk/eslint-config-kraftvaerk.svg?style=flat-square)](https://david-dm.org/kraftvaerk/eslint-config-kraftvaerk/?type=dev)
 
-> Kraftvaerk's shareable config for ESLint
+> ESLint shareable config for the Kraftvaerk JavaScript style guide
 
 ## Installation
 
