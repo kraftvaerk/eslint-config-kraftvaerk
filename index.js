@@ -4,7 +4,7 @@ module.exports = {
     'env': {
         'browser': true,
         'node': true,
-        'es6': true
+        'jest': true
     },
     'globals': {
         'jQuery': true,
@@ -13,7 +13,7 @@ module.exports = {
         'System': true
     },
     'parserOptions': {
-        'ecmaVersion': 6,
+        'ecmaVersion': 2017,
         'sourceType': 'module',
         'ecmaFeatures': {
             'arrowFunctions': true,
@@ -366,8 +366,8 @@ module.exports = {
         'space-unary-ops': 0,
         // require or disallow a space immediately following the // or /* in a comment
         'spaced-comment': [0, 'always', {
-          'exceptions': ['-', '+'],
-          'markers': ['=', '!']           // space here to support sprockets directives
+            'exceptions': ['-', '+'],
+            'markers': ['=', '!'] // space here to support sprockets directives
         }],
         // require regex literals to be wrapped in parentheses
         'wrap-regex': 0,
