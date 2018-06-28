@@ -1,6 +1,8 @@
-import { Linter } from 'eslint';
-import isPlainObject from 'is-plain-object';
-import config from '../';
+'use strict';
+
+const { Linter } = require('eslint');
+const isPlainObject = require('is-plain-object');
+const config = require('../');
 
 const linter = new Linter();
 
