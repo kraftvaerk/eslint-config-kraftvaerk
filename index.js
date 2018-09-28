@@ -6,12 +6,6 @@ module.exports = {
         'node': true,
         'jest': true
     },
-    'globals': {
-        'jQuery': true,
-        'angular': true,
-        '$': true,
-        'System': true
-    },
     'parserOptions': {
         'ecmaVersion': 2017,
         'sourceType': 'module',
