@@ -30,7 +30,6 @@ it('has valid config format', () => {
     expect(isPlainObject(config)).toBeTruthy();
     expect(isPlainObject(config.env)).toBeTruthy();
     expect(isPlainObject(config.rules)).toBeTruthy();
-    expect(isPlainObject(config.globals)).toBeTruthy();
 });
 
 it('has no errors with valid JS', async () => {
