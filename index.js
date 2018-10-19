@@ -114,7 +114,9 @@ module.exports = {
         // enforce newline at the end of file, with no multiple empty lines
         'eol-last': 2,
         // this option sets a specific tab width for your code
-        'indent': [2, 4],
+        'indent': [2, 4, {
+            'SwitchCase': 1
+        }],
         // enforces spacing between keys and values in object literal properties
         'key-spacing': [2, {
             'beforeColon': false,
