@@ -1,6 +1,6 @@
 {
-  "name": "eslint-config-kraftvaerk",
-  "version": "0.0.5",
+  "name": "@kraftvaerk/eslint-config",
+  "version": "1.0.0",
   "description": "ESLint shareable config for the Kraftvaerk JavaScript style guide",
   "keywords": [
     "kraftvaerk",
