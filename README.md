@@ -7,16 +7,16 @@
 ## Installation
 
 ```
-npm install --save-dev eslint eslint-config-kraftvaerk
+npm install --save-dev eslint @kraftvaerk/eslint-config
 ```
 
 ## Usage
 
-To use it set your `extends` property in `.eslintrc` to `eslint-config-kraftvaerk`.
+To use it set your `extends` property in `.eslintrc` to `@kraftvaerk/eslint-config`.
 
 ```json
 {
-  "extends": "eslint-config-kraftvaerk"
+  "extends": "@kraftvaerk/eslint-config"
 }
 ```
 
