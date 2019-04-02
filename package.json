@@ -43,7 +43,7 @@
   "devDependencies": {
     "eslint": "^5.10.0",
     "is-plain-object": "^2.0.4",
-    "jest": "^23.6.0"
+    "jest": "^24.6.0"
   },
   "engines": {
     "node": ">=8.0.0",
