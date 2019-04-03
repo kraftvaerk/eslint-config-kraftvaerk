@@ -1,6 +1,6 @@
 # eslint-config-kraftvaerk 
 
-[![Build Status](https://img.shields.io/travis/kraftvaerk/eslint-config-kraftvaerk/master.svg?style=flat-square)](https://travis-ci.org/kraftvaerk/eslint-config-kraftvaerk) [![npm Version](https://img.shields.io/npm/v/@kraftvaerk/eslint-config.svg?style=flat-square)](https://www.npmjs.com/package/@kraftvaerk/eslint-config-kraftvaerk) [![npm Downloads](https://img.shields.io/npm/dm/@kraftvaerk/eslint-config.svg?style=flat-square)](https://www.npmjs.com/package/@kraftvaerk/eslint-config) [![devDependency Status](https://img.shields.io/david/dev/kraftvaerk/eslint-config-kraftvaerk.svg?style=flat-square)](https://david-dm.org/kraftvaerk/eslint-config-kraftvaerk/?type=dev)
+[![Build Status](https://img.shields.io/travis/kraftvaerk/eslint-config-kraftvaerk/master.svg?style=flat-square)](https://travis-ci.org/kraftvaerk/eslint-config-kraftvaerk) [![npm Version](https://img.shields.io/npm/v/@kraftvaerk/eslint-config.svg?style=flat-square)](https://www.npmjs.com/package/@kraftvaerk/eslint-config) [![npm Downloads](https://img.shields.io/npm/dm/@kraftvaerk/eslint-config.svg?style=flat-square)](https://www.npmjs.com/package/@kraftvaerk/eslint-config) [![devDependency Status](https://img.shields.io/david/dev/kraftvaerk/eslint-config-kraftvaerk.svg?style=flat-square)](https://david-dm.org/kraftvaerk/eslint-config-kraftvaerk/?type=dev)
 
 > ESLint shareable config for the Kraftvaerk JavaScript style guide
 
