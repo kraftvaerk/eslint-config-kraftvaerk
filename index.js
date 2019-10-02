@@ -15,88 +15,88 @@ module.exports = {
     rules: {
         /* ECMAScript 6 */
         // require let or const instead of var
-        'no-var': 2,
+        'no-var': 'error',
         // suggest using of const declaration for variables that are never modified after declared
-        'prefer-const': 2,
+        'prefer-const': 'error',
 
 
         /* Best practices */
         // treat var statements as if they were block scoped
-        'block-scoped-var': 2,
+        'block-scoped-var': 'error',
         // require return statements to either always or never specify values
-        'consistent-return': 2,
+        'consistent-return': 'error',
         // specify curly brace conventions for all control statements
-        'curly': [2, 'multi-line'],
+        'curly': ['error', 'multi-line'],
         // require default case in switch statements
-        'default-case': 2,
+        'default-case': 'error',
         // encourages use of dot notation whenever possible
-        'dot-notation': [2, {
+        'dot-notation': ['error', {
             allowKeywords: true,
         }],
         // require the use of === and !==
-        'eqeqeq': 2,
+        'eqeqeq': 'error',
         // disallow the use of alert, confirm, and prompt
-        'no-alert': 1,
+        'no-alert': 'warn',
         // disallow use of arguments.caller or arguments.callee
-        'no-caller': 2,
+        'no-caller': 'error',
         // disallow else after a return in an if
-        'no-else-return': 2,
+        'no-else-return': 'error',
         // disallow use of eval()
-        'no-eval': 2,
+        'no-eval': 'error',
         // disallow adding to native types
-        'no-extend-native': 2,
+        'no-extend-native': 'error',
         // disallow usage of __iterator__ property
-        'no-iterator': 2,
+        'no-iterator': 'error',
         // disallow unnecessary nested blocks
-        'no-lone-blocks': 2,
+        'no-lone-blocks': 'error',
         // disallow creation of functions within loops
-        'no-loop-func': 2,
+        'no-loop-func': 'error',
         // disallow use of multiple spaces
-        'no-multi-spaces': [1, {
+        'no-multi-spaces': ['warn', {
             exceptions: {
                 VariableDeclarator: true,
                 ImportDeclaration: true,
             },
         }],
         // disallow use of multiline strings
-        'no-multi-str': 1,
+        'no-multi-str': 'warn',
         // disallow use of new operator for Function object
-        'no-new-func': 2,
+        'no-new-func': 'error',
         // disallows creating new instances of String,Number, and Boolean
-        'no-new-wrappers': 2,
+        'no-new-wrappers': 'error',
         // disallow reassignment of function parameters
-        'no-param-reassign': 2,
+        'no-param-reassign': 'error',
         // disallow usage of __proto__ property
-        'no-proto': 2,
+        'no-proto': 'error',
         // disallow use of `javascript:` urls.
-        'no-script-url': 2,
+        'no-script-url': 'error',
         // disallow comparisons where both sides are exactly the same
-        'no-self-compare': 2,
+        'no-self-compare': 'error',
         // disallow use of comma operator
-        'no-sequences': 2,
+        'no-sequences': 'error',
         // restrict what can be thrown as an exception
-        'no-throw-literal': 2,
+        'no-throw-literal': 'error',
         // disallow usage of expressions in statement position
-        'no-unused-expressions': 2,
+        'no-unused-expressions': 'error',
         // disallow use of the with statement
-        'no-with': 2,
+        'no-with': 'error',
         // require use of the second argument for parseInt()
-        'radix': 2,
+        'radix': 'error',
         // requires to declare all vars on top of their containing scope
-        'vars-on-top': 2,
+        'vars-on-top': 'error',
         // require immediate function invocation to be wrapped in parentheses
-        'wrap-iife': [2, 'any'],
+        'wrap-iife': ['error', 'any'],
         // require or disallow Yoda conditions
-        'yoda': 2,
+        'yoda': 'error',
 
 
         /* Possible Errors */
         // disallow use of console
-        'no-console': [1, {
+        'no-console': ['warn', {
             allow: ['warn', 'error'],
         }],
         // disallow unnecessary parentheses
-        'no-extra-parens': [2, 'functions'],
+        'no-extra-parens': ['error', 'functions'],
 
 
         /* Stylistic Issues */
@@ -105,11 +105,11 @@ module.exports = {
         // enforce spacing inside single-line blocks
         'block-spacing': ['error', 'always'],
         // enforce one true brace style
-        'brace-style': [2, '1tbs', {
+        'brace-style': ['error', '1tbs', {
             allowSingleLine: true,
         }],
         // require camel case names
-        'camelcase': [2, {
+        'camelcase': ['error', {
             properties: 'never',
         }],
         // require trailing commas in multiline object literals
@@ -121,24 +121,24 @@ module.exports = {
             functions: 'always-multiline',
         }],
         // enforce spacing before and after comma
-        'comma-spacing': [2, {
+        'comma-spacing': ['error', {
             before: false,
             after: true,
         }],
         // enforce one true comma style
-        'comma-style': [2, 'last'],
+        'comma-style': ['error', 'last'],
         // disallow padding inside computed properties
         'computed-property-spacing': ['error', 'never'],
         // enforce newline at the end of file, with no multiple empty lines
-        'eol-last': 2,
+        'eol-last': 'error',
         // enforce spacing between functions and their invocations
         'func-call-spacing': ['error', 'never'],
         // this option sets a specific tab width for your code
-        'indent': [2, 4, {
+        'indent': ['error', 4, {
             SwitchCase: 1,
         }],
         // enforces spacing between keys and values in object literal properties
-        'key-spacing': [2, {
+        'key-spacing': ['error', {
             beforeColon: false,
             afterColon: true,
         }],
@@ -159,36 +159,36 @@ module.exports = {
             },
         }],
         // specify the maximum depth that blocks can be nested
-        'max-depth': [1, 4],
+        'max-depth': ['warn', 4],
         // limits the number of parameters that can be used in the function declaration.
-        'max-params': [1, 5],
+        'max-params': ['warn', 5],
         // require a capital letter for constructors
-        'new-cap': [2, {
+        'new-cap': ['error', {
             newIsCap: true,
         }],
         // disallow nested ternary expressions
-        'no-nested-ternary': 2,
+        'no-nested-ternary': 'error',
         // disallow use of the Object constructor
-        'no-new-object': 2,
+        'no-new-object': 'error',
         // disallow space between function identifier and application
         'no-spaced-func': 'error',
         // disallow trailing whitespace at the end of lines
-        'no-trailing-spaces': 2,
+        'no-trailing-spaces': 'error',
         // disallow whitespace before properties
         'no-whitespace-before-property': 'error',
         // require padding inside curly braces
         'object-curly-spacing': ['error', 'always'],
         // allow just one var statement per function
-        'one-var': [2, 'never'],
+        'one-var': ['error', 'never'],
         // enforce padding within blocks
-        'padded-blocks': [0, 'never'], // - to enable is only top padding possible
+        'padded-blocks': ['off', 'never'], // - to enable is only top padding possible
         // specify whether double or single quotes should be used
-        'quotes': [2, 'single', 'avoid-escape'],
+        'quotes': ['error', 'single', 'avoid-escape'],
         // enforce spacing before and after semicolons
         // require or disallow use of semicolons instead of ASI
-        'semi': [2, 'always'],
+        'semi': ['error', 'always'],
         // enforce spacing before and after semicolons
-        'semi-spacing': [2, {
+        'semi-spacing': ['error', {
             before: false,
             after: true,
         }],
@@ -203,7 +203,7 @@ module.exports = {
         // require or disallow spaces inside parentheses
         'space-in-parens': ['error', 'never'],
         // require spaces around operators
-        'space-infix-ops': 2,
+        'space-infix-ops': 'error',
         // require or disallow spaces before/after unary operators
         'space-unary-ops': ['error', {
             words: true,
@@ -233,10 +233,10 @@ module.exports = {
 
         /* Variables */
         // disallow shadowing of names such as arguments
-        'no-shadow-restricted-names': 2,
+        'no-shadow-restricted-names': 'error',
         // disallow declaration of variables already declared in the outer scope
-        'no-shadow': 2,
+        'no-shadow': 'error',
         // disallow use of variables before they are defined
-        'no-use-before-define': 1,
+        'no-use-before-define': 'warn',
     },
 };
