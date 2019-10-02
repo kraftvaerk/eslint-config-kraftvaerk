@@ -100,6 +100,10 @@ module.exports = {
 
 
         /* Stylistic Issues */
+        // enforce spacing inside array brackets
+        'array-bracket-spacing': ['error', 'never'],
+        // enforce spacing inside single-line blocks
+        'block-spacing': ['error', 'always'],
         // enforce one true brace style
         'brace-style': [2, '1tbs', {
             allowSingleLine: true,
@@ -123,8 +127,12 @@ module.exports = {
         }],
         // enforce one true comma style
         'comma-style': [2, 'last'],
+        // disallow padding inside computed properties
+        'computed-property-spacing': ['error', 'never'],
         // enforce newline at the end of file, with no multiple empty lines
         'eol-last': 2,
+        // enforce spacing between functions and their invocations
+        'func-call-spacing': ['error', 'never'],
         // this option sets a specific tab width for your code
         'indent': [2, 4, {
             SwitchCase: 1,
@@ -134,8 +142,22 @@ module.exports = {
             beforeColon: false,
             afterColon: true,
         }],
-        // require a space after return, throw, and case
-        'keyword-spacing': 2,
+        // require a space before & after certain keywords
+        'keyword-spacing': ['error', {
+            before: true,
+            after: true,
+            overrides: {
+                return: {
+                    after: true,
+                },
+                throw: {
+                    after: true,
+                },
+                case: {
+                    after: true,
+                },
+            },
+        }],
         // specify the maximum depth that blocks can be nested
         'max-depth': [1, 4],
         // limits the number of parameters that can be used in the function declaration.
@@ -148,8 +170,14 @@ module.exports = {
         'no-nested-ternary': 2,
         // disallow use of the Object constructor
         'no-new-object': 2,
+        // disallow space between function identifier and application
+        'no-spaced-func': 'error',
         // disallow trailing whitespace at the end of lines
         'no-trailing-spaces': 2,
+        // disallow whitespace before properties
+        'no-whitespace-before-property': 'error',
+        // require padding inside curly braces
+        'object-curly-spacing': ['error', 'always'],
         // allow just one var statement per function
         'one-var': [2, 'never'],
         // enforce padding within blocks
@@ -159,25 +187,48 @@ module.exports = {
         // enforce spacing before and after semicolons
         // require or disallow use of semicolons instead of ASI
         'semi': [2, 'always'],
+        // enforce spacing before and after semicolons
         'semi-spacing': [2, {
             before: false,
             after: true,
         }],
+        // require or disallow space before blocks
+        'space-before-blocks': 'error',
         // require or disallow space before function opening parenthesis
-        'space-before-function-paren': [0, 'never'],
+        'space-before-function-paren': ['error', {
+            anonymous: 'always',
+            named: 'never',
+            asyncArrow: 'always',
+        }],
+        // require or disallow spaces inside parentheses
+        'space-in-parens': ['error', 'never'],
         // require spaces around operators
         'space-infix-ops': 2,
+        // require or disallow spaces before/after unary operators
+        'space-unary-ops': ['error', {
+            words: true,
+            nonwords: false,
+            overrides: {},
+        }],
         // require or disallow a space immediately following the // or /* in a comment
         'spaced-comment': ['error', 'always', {
             line: {
-                markers: ['*package', '!', '/', ',', '='],
+                exceptions: ['-', '+'],
+                markers: ['=', '!'], // space here to support sprockets directives
             },
             block: {
+                exceptions: ['-', '+'],
+                markers: ['=', '!', ':', '::'], // space here to support sprockets directives and flow comment types
                 balanced: true,
-                markers: ['*package', '!', ',', ':', '::', 'flow-include'],
-                exceptions: ['*'],
             },
         }],
+        // enforce spacing around colons of switch statements
+        'switch-colon-spacing': ['error', {
+            after: true,
+            before: false,
+        }],
+        // require or disallow spacing between template tags and their literals
+        'template-tag-spacing': ['error', 'never'],
 
 
         /* Variables */
