@@ -6,11 +6,11 @@ module.exports = {
         es6: true,
         browser: true,
         node: true,
-        jest: true
+        jest: true,
     },
     parserOptions: {
         ecmaVersion: 2018,
-        sourceType: 'module'
+        sourceType: 'module',
     },
     rules: {
         /* ECMAScript 6 */
@@ -31,7 +31,7 @@ module.exports = {
         'default-case': 2,
         // encourages use of dot notation whenever possible
         'dot-notation': [2, {
-            allowKeywords: true
+            allowKeywords: true,
         }],
         // require the use of === and !==
         'eqeqeq': 2,
@@ -55,8 +55,8 @@ module.exports = {
         'no-multi-spaces': [1, {
             exceptions: {
                 VariableDeclarator: true,
-                ImportDeclaration: true
-            }
+                ImportDeclaration: true,
+            },
         }],
         // disallow use of multiline strings
         'no-multi-str': 1,
@@ -93,7 +93,7 @@ module.exports = {
         /* Possible Errors */
         // disallow use of console
         'no-console': [1, {
-            allow: ['warn', 'error']
+            allow: ['warn', 'error'],
         }],
         // disallow unnecessary parentheses
         'no-extra-parens': [2, 'functions'],
@@ -102,18 +102,24 @@ module.exports = {
         /* Stylistic Issues */
         // enforce one true brace style
         'brace-style': [2, '1tbs', {
-            allowSingleLine: true
+            allowSingleLine: true,
         }],
         // require camel case names
         'camelcase': [2, {
-            properties: 'never'
+            properties: 'never',
         }],
-        // disallow trailing commas in object literals
-        'comma-dangle': [2],
+        // require trailing commas in multiline object literals
+        'comma-dangle': ['error', {
+            arrays: 'always-multiline',
+            objects: 'always-multiline',
+            imports: 'always-multiline',
+            exports: 'always-multiline',
+            functions: 'always-multiline',
+        }],
         // enforce spacing before and after comma
         'comma-spacing': [2, {
             before: false,
-            after: true
+            after: true,
         }],
         // enforce one true comma style
         'comma-style': [2, 'last'],
@@ -121,12 +127,12 @@ module.exports = {
         'eol-last': 2,
         // this option sets a specific tab width for your code
         'indent': [2, 4, {
-            SwitchCase: 1
+            SwitchCase: 1,
         }],
         // enforces spacing between keys and values in object literal properties
         'key-spacing': [2, {
             beforeColon: false,
-            afterColon: true
+            afterColon: true,
         }],
         // require a space after return, throw, and case
         'keyword-spacing': 2,
@@ -136,7 +142,7 @@ module.exports = {
         'max-params': [1, 5],
         // require a capital letter for constructors
         'new-cap': [2, {
-            newIsCap: true
+            newIsCap: true,
         }],
         // disallow nested ternary expressions
         'no-nested-ternary': 2,
@@ -155,7 +161,7 @@ module.exports = {
         'semi': [2, 'always'],
         'semi-spacing': [2, {
             before: false,
-            after: true
+            after: true,
         }],
         // require or disallow space before function opening parenthesis
         'space-before-function-paren': [0, 'never'],
@@ -164,13 +170,13 @@ module.exports = {
         // require or disallow a space immediately following the // or /* in a comment
         'spaced-comment': ['error', 'always', {
             line: {
-                markers: ['*package', '!', '/', ',', '=']
+                markers: ['*package', '!', '/', ',', '='],
             },
             block: {
                 balanced: true,
                 markers: ['*package', '!', ',', ':', '::', 'flow-include'],
-                exceptions: ['*']
-            }
+                exceptions: ['*'],
+            },
         }],
 
 
@@ -180,6 +186,6 @@ module.exports = {
         // disallow declaration of variables already declared in the outer scope
         'no-shadow': 2,
         // disallow use of variables before they are defined
-        'no-use-before-define': 1
-    }
+        'no-use-before-define': 1,
+    },
 };
