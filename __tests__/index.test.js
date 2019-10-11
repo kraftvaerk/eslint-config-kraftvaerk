@@ -48,9 +48,9 @@ describe('invalid JS', () => {
         messages = linter.verify(invalidJS, config);
     });
 
-    it('has 6 errors', () => {
+    it('has 7 errors', () => {
         expect(messages).toBeTruthy();
-        expect(messages.length).toBe(6);
+        expect(messages.length).toBe(7);
     });
 
     it('has double quotes', () => {
@@ -69,11 +69,15 @@ describe('invalid JS', () => {
         expect(messages[3].ruleId).toBe('eqeqeq');
     });
 
-    it('has no spaces around infix operators', () => {
+    it('has no spaces around infix operator', () => {
         expect(messages[4].ruleId).toBe('space-infix-ops');
     });
 
+    it('has no spaces before block', () => {
+        expect(messages[5].ruleId).toBe('space-before-blocks');
+    });
+
     it('has invalid indentation', () => {
-        expect(messages[5].ruleId).toBe('indent');
+        expect(messages[6].ruleId).toBe('indent');
     });
 });

@@ -41,9 +41,9 @@
     "test": "jest"
   },
   "devDependencies": {
-    "eslint": "^5.10.0",
-    "is-plain-object": "^2.0.4",
-    "jest": "^23.6.0"
+    "eslint": "^6.5.1",
+    "is-plain-object": "^3.0.0",
+    "jest": "^25.0.0"
   },
   "engines": {
     "node": ">=8.0.0",
