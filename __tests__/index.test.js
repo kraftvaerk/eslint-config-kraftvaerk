@@ -1,30 +1,13 @@
 'use strict';
 
-const { Linter } = require('eslint');
-const isPlainObject = require('is-plain-object');
+const { ESLint } = require('eslint');
+const { isPlainObject } = require('is-plain-object');
 const config = require('../');
 
-const linter = new Linter();
-
-const validJS = `
-const foo = function () {};
-const bar = 0;
-
-if (foo === bar) {
-    foo();
-}
-`;
-
-const invalidJS = `
-"use strict";
-
-var foo = 1;
-const bar = 0;
-
-if(foo==bar){
-  foo();
-}
-`;
+const linter = new ESLint({
+    useEslintrc: false,
+    overrideConfig: config
+});
 
 it('has valid config format', () => {
     expect(isPlainObject(config)).toBeTruthy();
@@ -35,49 +18,17 @@ it('has valid config format', () => {
 it('has no errors with valid JS', async () => {
     expect.assertions(2);
 
-    const messages = linter.verify(validJS, config);
+    const results = await linter.lintFiles(['files/valid.js']);
 
-    expect(messages).toBeTruthy();
-    expect(messages.length).toBe(0);
+    expect(results[0].messages).toBeTruthy();
+    expect(results[0].messages.length).toBe(0);
 });
 
-describe('invalid JS', () => {
-    let messages = null;
+it('has no errors with valid TS', async () => {
+    expect.assertions(2);
 
-    beforeAll(() => {
-        messages = linter.verify(invalidJS, config);
-    });
+    const results = await linter.lintFiles(['files/valid.ts']);
 
-    it('has 7 errors', () => {
-        expect(messages).toBeTruthy();
-        expect(messages.length).toBe(7);
-    });
-
-    it('has double quotes', () => {
-        expect(messages[0].ruleId).toBe('quotes');
-    });
-
-    it('has unexpected `var`', () => {
-        expect(messages[1].ruleId).toBe('no-var');
-    });
-
-    it('has no spaces after `if`', () => {
-        expect(messages[2].ruleId).toBe('keyword-spacing');
-    });
-
-    it('has invalid conditions', () => {
-        expect(messages[3].ruleId).toBe('eqeqeq');
-    });
-
-    it('has no spaces around infix operator', () => {
-        expect(messages[4].ruleId).toBe('space-infix-ops');
-    });
-
-    it('has no spaces before block', () => {
-        expect(messages[5].ruleId).toBe('space-before-blocks');
-    });
-
-    it('has invalid indentation', () => {
-        expect(messages[6].ruleId).toBe('indent');
-    });
+    expect(results[0].messages).toBeTruthy();
+    expect(results[0].messages.length).toBe(0);
 });

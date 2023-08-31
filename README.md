@@ -22,4 +22,4 @@ To use it set your `extends` property in `.eslintrc` to `@kraftvaerk/eslint-conf
 
 ## License
 
-MIT © [Mithun Dhiman](http://mi2oon.com/)
+MIT © [Kraftvaerk](https://kraftvaerk.com/)
