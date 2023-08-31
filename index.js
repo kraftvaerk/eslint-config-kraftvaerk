@@ -13,8 +13,11 @@ module.exports = {
         ecmaVersion: 2018,
         sourceType: 'module'
     },
-    plugins: ['@typescript-eslint'],
+    plugins: ['@typescript-eslint', 'prettier'],
     rules: {
+        'prettier/prettier': 'error',
+
+
         /*
         Note: We are extending imported rules that are defined here:
             * eslint:recommended: https://github.com/eslint/eslint/blob/main/packages/js/src/configs/eslint-recommended.js
